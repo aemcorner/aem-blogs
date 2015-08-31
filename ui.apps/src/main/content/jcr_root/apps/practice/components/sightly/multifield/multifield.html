@@ -1,0 +1,30 @@
+
+Hello
+<div data-sly-use.countryInfo="${'practice/components/clientlibs/convertToJson.js' @ fieldName = 'countryinfo',fieldValue = ''}">
+
+        <ul>
+            <div data-sly-list.countryDetails ="${countryInfo.listJson}" data-sly-unwrap>
+              <li>  ${countryDetails.country} 
+				    <ul>
+                        <div data-sly-use.stateInfo="${'/apps/sdsingtel/components/clientlibs/convertToJson.js' @ fieldName = '',fieldValue = countryDetails.states}" data-sly-unwrap>
+                            <div data-sly-list.innerlistJson="${stateInfo.listJson}" data-sly-unwrap>
+                               <li>  ${innerlistJson.state} </li>
+						         <div data-sly-use.cityInfo="${'/apps/sdsingtel/components/clientlibs/convertToJson.js' @ fieldName = '',fieldValue = innerlistJson.cities}" data-sly-unwrap>
+								<ul>
+								<div data-sly-list.citylistJson="${cityInfo.listJson}" data-sly-unwrap>
+
+									<li>${citylistJson.city}</li>
+
+								 </div>
+								</ul>
+                            </div>
+                        </div>
+                    </ul>
+               </li>
+            </div>
+
+       </ul>
+
+
+    
+</div>
