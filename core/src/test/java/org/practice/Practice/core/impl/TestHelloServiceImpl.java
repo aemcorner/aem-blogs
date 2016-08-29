@@ -33,7 +33,7 @@ import org.junit.Test;
  */
 public class TestHelloServiceImpl {
 	
-	private HelloServiceImpl helloService;
+	/*private HelloServiceImpl helloService;
 	
 	private String slingId;
 	
@@ -52,6 +52,6 @@ public class TestHelloServiceImpl {
 		String msg = helloService.getMessage();
 		assertNotNull(msg);
 		assertTrue(msg.length()>0);
-	}
+	}*/
 
 }
